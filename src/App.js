@@ -1,11 +1,12 @@
 import React from 'react';
 import Layout from './containers/Layout';
+import RepoFinder from './containers/RepoFinder';
 
 function App() {
   return (
-   <Layout>
-     <p>app works</p>
-   </Layout>
+    <Layout>
+      <RepoFinder />
+    </Layout>
   );
 }
 
