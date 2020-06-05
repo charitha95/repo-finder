@@ -1,8 +1,11 @@
 import React from 'react';
+import Layout from './containers/containers/Layout';
 
 function App() {
   return (
-   <p>app works</p>
+   <Layout>
+     <p>app works</p>
+   </Layout>
   );
 }
 
