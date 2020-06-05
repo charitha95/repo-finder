@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * Function representing layout of the main application
+ * Function represents layout of the main application
  * @param {Object} props Component Props 
  */
 const Layout = props => {

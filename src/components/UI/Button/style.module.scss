@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+
+.btn {
+  background-color: $action-dark-color;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: $border-radius;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  min-width: 85px;
+  font-family: $font-family-default;
+}
