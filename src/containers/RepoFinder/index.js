@@ -1,9 +1,10 @@
 import React from 'react';
+import Input from '../../components/UI/Input';
 
 const RepoFinder = () => {
   return <section>
     <label>GitHub Username</label>
-    <input type='text' placeholder='Enter Git user name'/>
+    <Input type='text' placeholder='Enter Git user name' />
   </section>
 }
 

@@ -1,0 +1,30 @@
+/**
+* @desc         set up variables.
+* @requires     none
+*/
+
+// [color - variables]
+// branding
+$primary-dark-color: #2C2C2C;
+$primary-light-color: #F8F1EA;
+$danger-light-color: #E16B93;
+$action-dark-color: $primary-dark-color;
+
+// text
+$text-color: #242424;
+$text-light-color: #E1E8F0;
+$title-color: #242424;
+
+// body
+$body-background: $primary-light-color;
+
+// font family
+$font-family-title: 'Poppins', sans-serif;
+$font-family-default: 'Roboto', sans-serif;
+
+// border colors
+$border-color: #707070;
+
+// shadows
+$box-shadow-light: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.06);
+$box-shadow-medium: 0 8px 11px rgba(0, 0, 0, 0.1), 0 9px 12px rgba(0, 0, 0, 0.2);
