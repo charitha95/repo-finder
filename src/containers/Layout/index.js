@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './style.module.scss';
 
 /**
  * Function represents layout of the main application
@@ -11,7 +12,7 @@ const Layout = props => {
   return (
     <>
       {/* TODO:: header */}
-      <main>
+      <main className={classes.layout}>
         {props.children}
       </main>
       {/* TODO:: footer */}
