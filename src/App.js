@@ -2,14 +2,15 @@ import React from 'react';
 import Layout from './containers/Layout';
 import RepoFinder from './containers/RepoFinder';
 import Repositories from './containers/Repositories';
-// import RepositoryDetails from './containers/RepositoryDetails';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Layout>
-      <RepoFinder />
-      <Repositories />
-      {/* <RepositoryDetails /> */}
+      <Switch>
+        <Route exact path='/' component={RepoFinder} />
+        <Route path='/:id' component={Repositories} />
+      </Switch>
     </Layout>
   );
 }

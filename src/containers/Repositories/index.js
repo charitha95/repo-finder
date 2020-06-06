@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './style.module.scss';
 import backIcon from '../../assets/icons/back.svg';
 import Card from '../../components/UI/Card';
+import { Route } from 'react-router-dom';
+import RepositoryDetails from '../RepositoryDetails';
 
 const Repositories = ({ username }) => {
   return <section className={classes.repositories}>
@@ -12,7 +14,11 @@ const Repositories = ({ username }) => {
       <img src={backIcon} alt='back' />
       <label>Go back</label>
     </section>
-    <Card />
+    <Card>
+      <p>list here</p>
+      <Route path='/:id/:id' component={RepositoryDetails} />
+
+    </Card>
   </section>
 }
 
