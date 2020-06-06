@@ -1,3 +1,24 @@
+@import '../../styles/variables';
+
 .repoFinder {
-  
+  min-width: 600px;
+  .header {
+    margin-bottom: 75px;
+    * {
+      margin-bottom: 15px;
+    }
+  }
+  .search {
+    background-color: #fff;
+    border-radius: 32px;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $box-shadow-medium;
+    * {
+      margin: 8px;
+    }
+  }
 }
