@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classes from './style.module.scss';
 
-const ListItem = ({ path, title, language}) => {
+const ListItem = ({ path, title, language }) => {
   return <li className={classes.item}>
-    <Link to={`/username/${path}`}>
+    <NavLink to={`/username/${path}`} activeClassName={classes.activeLink}>
       <label>{title}</label>
       <span>Language: <i>{language}</i></span>
-    </Link>
+    </NavLink>
   </li>
 }
 
