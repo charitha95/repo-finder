@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Input } from '../../components/UI';
+import { Button, Input, Card } from '../../components/UI';
 import classes from './style.module.scss';
-import Card from '../../components/UI/Card';
+import { Link } from 'react-router-dom';
 
 const RepoFinder = () => {
   return <section className={classes.repoFinder}>
@@ -12,7 +12,9 @@ const RepoFinder = () => {
 
     <Card customClass={classes.search}>
       <Input type='text' placeholder='Enter Git user name' />
-      <Button>GO</Button>
+      <Link to='/username'>
+        <Button>GO</Button>
+      </Link>
     </Card>
   </section>
 }

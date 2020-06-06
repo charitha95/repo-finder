@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './style.module.scss';
 import backIcon from '../../assets/icons/back.svg';
-import Card from '../../components/UI/Card';
+import { Card, List } from '../../components/UI';
 import { Route } from 'react-router-dom';
 import RepositoryDetails from '../RepositoryDetails';
 
@@ -16,9 +16,10 @@ const Repositories = ({ username }) => {
     </section>
     <Card customClass={classes.repoListContainer}>
       <section className={classes.repoList}>
-        <p>list here</p>
+        <List />
       </section>
       <section className={classes.readme}>
+        <p>select a repo to load</p>
         <Route path='/:id/:id' component={RepositoryDetails} />
       </section>
     </Card>
