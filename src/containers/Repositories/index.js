@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './style.module.scss';
 import backIcon from '../../assets/icons/back.svg';
+import Card from '../../components/UI/Card';
 
 const Repositories = ({ username }) => {
   return <section className={classes.repositories}>
@@ -8,12 +9,10 @@ const Repositories = ({ username }) => {
       <h3>Repositories in {username} User</h3>
     </section>
     <section className={classes.goBack}>
-      <img src={backIcon} alt='back' /> 
+      <img src={backIcon} alt='back' />
       <label>Go back</label>
     </section>
-    <section className={classes.repoList}>
-
-    </section>
+    <Card />
   </section>
 }
 

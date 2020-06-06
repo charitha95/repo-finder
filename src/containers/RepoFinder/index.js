@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Input } from '../../components/UI';
 import classes from './style.module.scss';
+import Card from '../../components/UI/Card';
 
 const RepoFinder = () => {
   return <section className={classes.repoFinder}>
@@ -9,10 +10,10 @@ const RepoFinder = () => {
       <h3>Welcome to GitHub Repo Finder app.</h3>
     </section>
 
-    <section className={classes.search}>
+    <Card customClass={classes.search}>
       <Input type='text' placeholder='Enter Git user name' />
       <Button>GO</Button>
-    </section>
+    </Card>
   </section>
 }
 
