@@ -6,37 +6,41 @@
     margin-bottom: 75px;
   }
   .goBack {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-
-    img {
-      width: 12px;
-      height: 12px;
-      padding: 10px;
-      background: #fff;
-      border-radius: 50px;
-    }
-    * {
-      margin-right: 10px;
-      cursor: pointer;
+    a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      img {
+        width: 12px;
+        height: 12px;
+        padding: 10px;
+        background: #fff;
+        border-radius: 50px;
+      }
+      * {
+        margin-right: 10px;
+        cursor: pointer;
+      }
     }
   }
 
   .repoListContainer {
+    height: 525px;
     display: flex;
     padding: 0;
     justify-content: space-between;
     .repoList {
-      padding: 50px 10px;
+      padding: 0 10px;
       height: 100%;
     }
     .readme {
       background-color: $primary-dark-color;
-      padding: 50px 10px;
+      padding: 30px 10px;
       border-radius: 26px;
       max-width: 550px;
       color: $text-light-color;
+      height: calc(100% - 60px);
+      width: 100%;
     }
   }
 }

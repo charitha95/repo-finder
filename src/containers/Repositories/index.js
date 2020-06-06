@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './style.module.scss';
 import backIcon from '../../assets/icons/back.svg';
 import { Card, List } from '../../components/UI';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import RepositoryDetails from '../RepositoryDetails';
 
 const Repositories = ({ username }) => {
@@ -11,8 +11,10 @@ const Repositories = ({ username }) => {
       <h3>Repositories in {username} User</h3>
     </section>
     <section className={classes.goBack}>
-      <img src={backIcon} alt='back' />
-      <label>Go back</label>
+      <Link to='/'>
+        <img src={backIcon} alt='back' />
+        <label>Go back</label>
+      </Link>
     </section>
     <Card customClass={classes.repoListContainer}>
       <section className={classes.repoList}>

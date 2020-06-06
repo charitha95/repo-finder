@@ -7,6 +7,8 @@ const List = () => {
     { title: 'Project 1', id: '32fa24', language: 'JavaScript' },
     { title: 'Project 2', id: '42ea24', language: 'JavaScript' },
     { title: 'Project 3', id: '66f224', language: 'C#' },
+    { title: 'Project 2', id: '42ea24', language: 'JavaScript' },
+    { title: 'Project 3', id: '66f224', language: 'C#' },
     { title: 'Project 4', id: '121124', language: 'HTML' }
   ]
   return <ul className={classes.list}>
