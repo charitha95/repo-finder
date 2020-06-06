@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+
+.repositories {
+  min-width: 900px;
+  .header {
+    margin-bottom: 75px;
+  }
+  .goBack {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    img {
+      width: 12px;
+      height: 12px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 50px;
+    }
+    * {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  .repoList {
+    background-color: #fff;
+    border-radius: 26px;
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $box-shadow-medium;
+    * {
+      margin: 8px;
+    }
+  }
+}
