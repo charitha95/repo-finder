@@ -22,4 +22,21 @@
       cursor: pointer;
     }
   }
+
+  .repoListContainer {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    .repoList {
+      padding: 50px 10px;
+      height: 100%;
+    }
+    .readme {
+      background-color: $primary-dark-color;
+      padding: 50px 10px;
+      border-radius: 26px;
+      max-width: 550px;
+      color: $text-light-color;
+    }
+  }
 }

@@ -14,10 +14,13 @@ const Repositories = ({ username }) => {
       <img src={backIcon} alt='back' />
       <label>Go back</label>
     </section>
-    <Card>
-      <p>list here</p>
-      <Route path='/:id/:id' component={RepositoryDetails} />
-
+    <Card customClass={classes.repoListContainer}>
+      <section className={classes.repoList}>
+        <p>list here</p>
+      </section>
+      <section className={classes.readme}>
+        <Route path='/:id/:id' component={RepositoryDetails} />
+      </section>
     </Card>
   </section>
 }
