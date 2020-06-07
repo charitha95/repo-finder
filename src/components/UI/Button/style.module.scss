@@ -1,7 +1,6 @@
 @import "../../../styles/variables";
 
 .btn {
-  background-color: $action-dark-color;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -11,4 +10,15 @@
   color: #fff;
   min-width: 85px;
   font-family: $font-family-default;
+  &.primary {
+    background-color: $action-dark-color;
+  }
+  &.secondary {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+    color: #2c2c2c;
+    background-color: $primary-light-color;
+  }
 }

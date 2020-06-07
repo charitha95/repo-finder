@@ -2,14 +2,15 @@ import React from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import classes from './style.module.scss';
 
-const ListItem = ({ path, title, language }) => {
+const ListItem = ({ path, title, language, description }) => {
 
   const param = useParams();
 
   return <li className={classes.item}>
     <NavLink to={`/${param.id}/${path}`} activeClassName={classes.activeLink}>
       <label>{title}</label>
-      <span>Language: <i>{language}</i></span>
+      {language && <span> <strong> Language:</strong> {language}</span>}
+      {description && <span> <strong>Description:</strong> {description}</span>}
     </NavLink>
   </li>
 }

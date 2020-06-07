@@ -1,5 +1,5 @@
 @import "../../../../styles/variables";
-@import '../../../../styles/placeholder';
+@import "../../../../styles/placeholder";
 
 .item {
   a {
@@ -15,10 +15,11 @@
     @extend %ease;
     span {
       color: #707070;
+      padding-top: 10px;
     }
     label {
-      padding-bottom: 10px;
       cursor: pointer;
+      font-weight: bold;
     }
     &.activeLink {
       background-color: #fff;

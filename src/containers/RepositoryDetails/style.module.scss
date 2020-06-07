@@ -15,4 +15,15 @@
   a {
     color: #17a8bf;
   }
+  pre {
+    border-radius: 10px;
+  }
+  img {
+    width: 100%;
+  }
+  a {
+    img {
+      width: auto;
+    }
+  }
 }
