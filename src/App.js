@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./containers/Layout";
+import Layout from "./components/Layout";
 import RepoFinder from "./containers/RepoFinder";
 import Repositories from "./containers/Repositories";
 import { Route, BrowserRouter as Router } from "react-router-dom";

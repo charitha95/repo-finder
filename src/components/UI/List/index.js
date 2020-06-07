@@ -1,10 +1,9 @@
 import React from 'react';
 import ListItem from './ListItem';
 import classes from './style.module.scss';
-import NotFound from '../NotFound/NotFound';
+import NotFound from '../NotFound';
 
 const List = ({ userRepos }) => {
-  console.log('repos', userRepos)
   return <>
     {(userRepos && userRepos.length !== 0) ?
       <ul className={classes.list}>
@@ -13,6 +12,7 @@ const List = ({ userRepos }) => {
             key={item.id}
             path={item.name}
             title={item.name}
+            description={item.description}
             language={item.language}
           />)
         }

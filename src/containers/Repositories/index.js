@@ -3,7 +3,7 @@ import classes from "./style.module.scss";
 import backIcon from "../../assets/icons/back.svg";
 import RepositoryDetails from "../RepositoryDetails";
 import getRepositories from "../../store/actions/repository.action";
-import Fetching from "../../components/UI/Fetching/Fetching";
+import Fetching from "../../components/UI/Fetching";
 import { Context } from "../../store/Provider";
 import { Card, List } from "../../components/UI";
 import { Route, Link } from "react-router-dom";

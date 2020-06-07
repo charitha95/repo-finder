@@ -7,17 +7,9 @@ import classes from './style.module.scss';
  */
 const Layout = props => {
 
-  // might have state in later so defining in containers
-
-  return (
-    <>
-      {/* TODO:: header */}
-      <main className={classes.layout}>
-        {props.children}
-      </main>
-      {/* TODO:: footer */}
-    </>
-  )
+  return <main className={classes.layout}>
+    {props.children}
+  </main>
 }
 
 export default Layout;

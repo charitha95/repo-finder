@@ -1,0 +1,18 @@
+.selectRepo {
+  margin: auto;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  h4 {
+    margin-bottom: 0;
+  }
+  figure {
+    width: 175px;
+    img {
+      width: 100%;
+    }
+  }
+}

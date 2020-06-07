@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import classNames from './style.module.scss';
 import CodeBlock from '../../components/UI/CodeBlock';
 import ErrorBoundary from '../ErrorBoundary';
+import Fetching from '../../components/UI/Fetching';
 import { Context } from '../../store/Provider';
 
 const RepositoryDetails = ({ match }) => {
@@ -12,13 +13,15 @@ const RepositoryDetails = ({ match }) => {
 
   const { fetching, data } = contextState.readme;
 
+  console.log(data)
   useEffect(() => {
     getReadme(match.url, dispatch)
   }, [match.url, dispatch]);
 
   return <ErrorBoundary>
     <section className={classNames.markdown}>
-      {!fetching &&
+      {fetching ?
+        <Fetching /> :
         <ReactMarkdown
           source={data}
           escapeHtml={false}
