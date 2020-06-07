@@ -1,0 +1,28 @@
+@import "../../../../styles/variables";
+@import '../../../../styles/placeholder';
+
+.item {
+  a {
+    background-color: $grey-background;
+    border-radius: 12px;
+    width: 250px;
+    overflow: auto;
+    margin-bottom: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    @extend %ease;
+    span {
+      color: #707070;
+    }
+    label {
+      padding-bottom: 10px;
+      cursor: pointer;
+    }
+    &.activeLink {
+      background-color: #fff;
+      box-shadow: $box-shadow-light;
+    }
+  }
+}

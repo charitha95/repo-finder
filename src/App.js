@@ -1,18 +1,16 @@
-import React from 'react';
-import Layout from './containers/Layout';
-import RepoFinder from './containers/RepoFinder';
-import Repositories from './containers/Repositories';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import Layout from "./containers/Layout";
+import RepoFinder from "./containers/RepoFinder";
+import Repositories from "./containers/Repositories";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <Layout>
-      <Switch>
-        <Route exact path='/' component={RepoFinder} />
-        <Route path='/:id' component={Repositories} />
-      </Switch>
+      <Router>
+        <Route exact path="/" component={RepoFinder} />
+        <Route path="/:id" component={Repositories} />
+      </Router>
     </Layout>
   );
 }
-
-export default App;
