@@ -11,4 +11,5 @@ const getReadme = (fullpath, dispatch) => {
 
     .catch(err => dispatch({ type: GET_README_FAILD, payload: err }))
 }
+
 export default getReadme;

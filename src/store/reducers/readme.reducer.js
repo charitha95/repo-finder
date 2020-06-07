@@ -2,7 +2,7 @@ import { GET_README_FETCH, GET_README_SUCCESS, GET_README_FAILD } from "../actio
 
 const initialState = {
   fetching: false,
-  readme: null,
+  data: null,
   error: null
 }
 
@@ -14,7 +14,7 @@ const readmeReducer = (state, action) => {
       return { ...state, ...initialState, fetching: true }
 
     case GET_README_SUCCESS:
-      return { ...state, ...initialState, fetching: false, readme: action.payload }
+      return { ...state, ...initialState, fetching: false, data: action.payload }
 
     case GET_README_FAILD:
       return { ...state, ...initialState, fetching: false, error: action.payload }

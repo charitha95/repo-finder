@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import classes from "./style.module.scss";
 import backIcon from "../../assets/icons/back.svg";
+import RepositoryDetails from "../RepositoryDetails";
+import getRepositories from "../../store/actions/repository.action";
+import { Context } from "../../store/Provider";
 import { Card, List } from "../../components/UI";
 import { Route, Link } from "react-router-dom";
-import RepositoryDetails from "../RepositoryDetails";
 
-const Repositories = ({ username, match }) => {
+const Repositories = ({ match }) => {
+
+  const { contextState, dispatch } = useContext(Context);
+
+  const { fetching, data } = contextState.repos
+
+  useEffect(() => {
+    getRepositories(match.params.id, dispatch);
+  }, [match.params.id, dispatch]);
+
   return (
     <section className={classes.repositories}>
       <section className={classes.header}>
-        <h3>Repositories in {username} User</h3>
+        <h3>Repositories in {match.params.id} User</h3>
       </section>
 
       <section className={classes.goBack}>
@@ -21,7 +32,7 @@ const Repositories = ({ username, match }) => {
 
       <Card customClass={classes.repoListContainer}>
         <section className={classes.repoList}>
-          <List />
+          {!fetching && <List userRepos={data} />}
         </section>
 
         <section className={classes.readme}>

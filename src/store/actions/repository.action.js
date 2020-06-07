@@ -1,7 +1,7 @@
 import { GET_REPOS_SUCCESS, GET_REPOS_FAILD, GET_REPOS_FETCH } from "./type";
 import { getUserRepositories } from "../../api/repositoy.api";
 
-export default function getRepositories(username, dispatch) {
+const getRepositories = (username, dispatch) => {
 
   dispatch({ type: GET_REPOS_FETCH });
 
@@ -14,3 +14,5 @@ export default function getRepositories(username, dispatch) {
       dispatch({ type: GET_REPOS_FAILD, payload: error })
     )
 }
+
+export default getRepositories

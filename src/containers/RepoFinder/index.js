@@ -23,6 +23,7 @@ const RepoFinder = props => {
         placeholder='Enter Git user name'
         changeHandler={(e) => { setUsername(e.target.value) }}
       />
+
       <Button
         clickHandler={handleClick}>
         GO
