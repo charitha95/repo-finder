@@ -6,7 +6,7 @@ export default function CustomeState({ img, title, description }) {
     <figure>
       <img src={img} alt='reponotfound' />
     </figure>
-    <h2>{title}</h2>
+    <h4>{title}</h4>
     <p>{description}</p>
   </section>
 }

@@ -80,11 +80,12 @@ table {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(44, 44, 44, 0.295);
+  background: rgba(182, 180, 180, 0.295);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(44, 44, 44, 0.555);
+  background: rgba(182, 180, 180, 0.486);
+  cursor: pointer;
 }

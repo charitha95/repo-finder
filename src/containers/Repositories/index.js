@@ -21,7 +21,7 @@ const Repositories = ({ match }) => {
   return (
     <section className={classes.repositories}>
       <section className={classes.header}>
-        <h3>Repositories of {match.params.id} User</h3>
+        <h3>Repositories of <strong>{match.params.id}</strong> User</h3>
       </section>
 
       <section className={classes.goBack}>

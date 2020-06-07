@@ -1,0 +1,9 @@
+.errorBoundary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button {
+    margin: 0 !important;
+  }
+}

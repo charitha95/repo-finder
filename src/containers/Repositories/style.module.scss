@@ -49,6 +49,8 @@
       color: $text-light-color;
       height: calc(100% - 60px);
       width: 550px;
+      display: flex;
+      justify-content: center;
     }
   }
 }
