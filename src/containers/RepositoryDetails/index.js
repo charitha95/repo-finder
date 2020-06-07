@@ -4,9 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import classNames from './style.module.scss';
 import CodeBlock from '../../components/UI/CodeBlock';
 import ErrorBoundary from '../ErrorBoundary';
-import Fetching from '../../components/UI/Fetching';
-import Error from '../../components/UI/Error';
 import { Context } from '../../store/Provider';
+import { Fetching, Error } from '../../components/UI/States';
 
 const RepositoryDetails = ({ match }) => {
 

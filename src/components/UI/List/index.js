@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem';
 import classes from './style.module.scss';
-import NotFound from '../NotFound';
+import { NotFound } from '../States';
 
 const List = ({ userRepos }) => {
   return <>
