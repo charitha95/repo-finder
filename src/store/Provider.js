@@ -3,7 +3,7 @@ import rootReducer from './reducers/rootReducer';
 
 export const Context = createContext();
 
-const Provider = ({ children }) => {
+export default function Provider({ children }) {
 
   const [contextState, dispatch] = useReducer(rootReducer, { repos: [], readme: '' })
 
@@ -11,5 +11,3 @@ const Provider = ({ children }) => {
     {children}
   </Context.Provider>
 }
-
-export default Provider;
