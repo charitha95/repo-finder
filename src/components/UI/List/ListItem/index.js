@@ -2,6 +2,10 @@ import React from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import classes from './style.module.scss';
 
+/**
+ * Function represents repo a single repository component
+ * @param {Object} props Component Props 
+ */
 export default function ListItem({ path, title, language, description }) {
 
   const param = useParams();

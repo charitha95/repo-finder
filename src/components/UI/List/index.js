@@ -3,6 +3,10 @@ import ListItem from './ListItem';
 import classes from './style.module.scss';
 import { NotFound } from '../States';
 
+/**
+ * Function represents repo list component
+ * @param {Object} props Component Props 
+ */
 export default function List({ userRepos }) {
 
   return <>

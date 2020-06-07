@@ -7,6 +7,10 @@ import ErrorBoundary from '../ErrorBoundary';
 import { Context } from '../../store/Provider';
 import { Fetching, Error } from '../../components/UI/States';
 
+/**
+ * Function represents the readme component/ repository details
+ * @param {Object} props Component Props 
+ */
 export default function RepositoryDetails({ match }) {
 
   const { contextState, dispatch } = useContext(Context);
