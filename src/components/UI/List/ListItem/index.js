@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import classes from './style.module.scss';
 
-const ListItem = ({ path, title, language, description }) => {
+export default function ListItem({ path, title, language, description }) {
 
   const param = useParams();
 
@@ -14,5 +14,3 @@ const ListItem = ({ path, title, language, description }) => {
     </NavLink>
   </li>
 }
-
-export default ListItem;

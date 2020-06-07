@@ -3,7 +3,8 @@ import ListItem from './ListItem';
 import classes from './style.module.scss';
 import { NotFound } from '../States';
 
-const List = ({ userRepos }) => {
+export default function List({ userRepos }) {
+
   return <>
     {(userRepos && userRepos.length !== 0) ?
       <ul className={classes.list}>
@@ -21,7 +22,4 @@ const List = ({ userRepos }) => {
       <NotFound />
     }
   </>
-
 }
-
-export default List;

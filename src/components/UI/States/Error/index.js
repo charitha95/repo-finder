@@ -3,6 +3,7 @@ import errorImage from '../../../../assets/imgs/error.png';
 import CustomeState from '../CustomeState';
 
 export default function Error() {
+
   return <CustomeState
     img={errorImage}
     title='Oopz!'
