@@ -6,13 +6,14 @@ const getRepositories = (username, dispatch) => {
   dispatch({ type: GET_REPOS_FETCH });
 
   getUserRepositories(username)
-    .then(res => res.json())
-    .then(data =>
-      dispatch({ type: GET_REPOS_SUCCESS, payload: data }))
-
-    .catch(error =>
-      dispatch({ type: GET_REPOS_FAILD, payload: error })
-    )
+    .then(res => {
+      if (res.ok) {
+        res.json().then(data => dispatch({ type: GET_REPOS_SUCCESS, payload: data }))
+      } else {
+        res.json().then(error => dispatch({ type: GET_REPOS_FAILD, payload: error }))
+      }
+    })
+    .catch(error => dispatch({ type: GET_REPOS_FAILD, payload: error }));
 }
 
 export default getRepositories

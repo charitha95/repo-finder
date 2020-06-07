@@ -6,10 +6,14 @@ const getReadme = (fullpath, dispatch) => {
   dispatch({ type: GET_README_FETCH });
 
   getRepoReadme(fullpath)
-    .then(res => res.text())
-    .then(data => dispatch({ type: GET_README_SUCCESS, payload: data }))
-
-    .catch(err => dispatch({ type: GET_README_FAILD, payload: err }))
+    .then(res => {
+      if (res.ok) {
+        res.text().then(data => dispatch({ type: GET_README_SUCCESS, payload: data }))
+      } else {
+        res.text().then(error => dispatch({ type: GET_README_FAILD, payload: error }))
+      }
+    })
+    .catch(error => dispatch({ type: GET_README_FAILD, payload: error }));
 }
 
 export default getReadme;

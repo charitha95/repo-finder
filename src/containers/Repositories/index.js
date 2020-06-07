@@ -4,6 +4,7 @@ import backIcon from "../../assets/icons/back.svg";
 import RepositoryDetails from "../RepositoryDetails";
 import getRepositories from "../../store/actions/repository.action";
 import Fetching from "../../components/UI/Fetching";
+import Error from "../../components/UI/Error";
 import { Context } from "../../store/Provider";
 import { Card, List } from "../../components/UI";
 import { Route, Link } from "react-router-dom";
@@ -12,7 +13,7 @@ const Repositories = ({ match }) => {
 
   const { contextState, dispatch } = useContext(Context);
 
-  const { fetching, data } = contextState.repos;
+  const { fetching, data, error } = contextState.repos;
 
   useEffect(() => {
     getRepositories(match.params.id, dispatch);
@@ -35,10 +36,11 @@ const Repositories = ({ match }) => {
         <section className={classes.repoList}>
           {fetching ?
             <Fetching /> :
-            <>
-              <List userRepos={data} />
-              {data && data.length !== 0 ? <span className={classes.result}>{data.length} repositories found </span> : null}
-            </>
+            error ? <Error /> :
+              <>
+                <List userRepos={data} />
+                {data && data.length !== 0 ? <span className={classes.result}>{data.length} repositories found </span> : null}
+              </>
           }
         </section>
 

@@ -9,7 +9,6 @@ const initialState = {
 const repositoryReducer = (state, action) => {
 
   switch (action.type) {
-
     case GET_REPOS_FETCH:
       return { ...state, ...initialState, fetching: true }
 
