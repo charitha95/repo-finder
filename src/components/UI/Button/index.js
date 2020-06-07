@@ -1,13 +1,13 @@
 import React from 'react';
-import classes from './style.module.scss';
+import classNames from './style.module.scss';
 
 /**
  * Function represents a common button
  * @param {Object} props Component Props 
  */
-const Button = ({ children, clickHandler }) => {
+const Button = ({ children, clickHandler, isPrimary = true }) => {
   return <button
-  className={classes.btn}
+    className={`${classNames.btn} ${isPrimary ? classNames.primary : classNames.secondary}`}
     onClick={clickHandler}>
     {children}
   </button>

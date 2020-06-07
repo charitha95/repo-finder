@@ -3,6 +3,7 @@ import getReadme from '../../store/actions/readme.action';
 import ReactMarkdown from 'react-markdown';
 import classNames from './style.module.scss';
 import CodeBlock from '../../components/UI/CodeBlock';
+import ErrorBoundary from '../ErrorBoundary';
 import { Context } from '../../store/Provider';
 
 const RepositoryDetails = ({ match }) => {
@@ -11,21 +12,21 @@ const RepositoryDetails = ({ match }) => {
 
   const { fetching, data } = contextState.readme;
 
-  console.log(fetching, data);
-
   useEffect(() => {
     getReadme(match.url, dispatch)
   }, [match.url, dispatch]);
 
-  return <section className={classNames.markdown}>
-    {!fetching &&
-      <ReactMarkdown
-        source={data}
-        escapeHtml={false}
-        renderers={{ code: CodeBlock }}
-      />
-    }
-  </section>
+  return <ErrorBoundary>
+    <section className={classNames.markdown}>
+      {!fetching &&
+        <ReactMarkdown
+          source={data}
+          escapeHtml={false}
+          renderers={{ code: CodeBlock }}
+        />
+      }
+    </section>
+  </ErrorBoundary>
 }
 
 export default RepositoryDetails;
