@@ -6,7 +6,7 @@ const initialState = {
   error: null
 }
 
-const getReadmeReducer = (state, action) => {
+const readmeReducer = (state, action) => {
 
   switch (action.type) {
 
@@ -24,4 +24,4 @@ const getReadmeReducer = (state, action) => {
   }
 }
 
-export default getReadmeReducer
+export default readmeReducer
