@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import getReadme from '../../store/actions/readme.action';
 import ReactMarkdown from 'react-markdown';
 import classNames from './style.module.scss';
+import CodeBlock from '../../components/UI/CodeBlock';
 import { Context } from '../../store/Provider';
 
 const RepositoryDetails = ({ match }) => {
@@ -21,7 +22,7 @@ const RepositoryDetails = ({ match }) => {
       <ReactMarkdown
         source={data}
         escapeHtml={false}
-      // renderers={{ code: CodeBlock }}
+        renderers={{ code: CodeBlock }}
       />
     }
   </section>
