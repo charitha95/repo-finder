@@ -6,7 +6,7 @@ const List = ({ userRepos }) => {
   return <ul className={classes.list}>
     {(userRepos && userRepos.length !== 0) ? userRepos.map(item => <ListItem
       key={item.id}
-      path={item.id}
+      path={item.name}
       title={item.name}
       language={item.language}
     />) : null}

@@ -11,7 +11,7 @@ const Repositories = ({ match }) => {
 
   const { contextState, dispatch } = useContext(Context);
 
-  const { fetching, data } = contextState.repos
+  const { fetching, data } = contextState.repos;
 
   useEffect(() => {
     getRepositories(match.params.id, dispatch);
