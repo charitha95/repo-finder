@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import getReadme from '../../store/actions/readme.action';
+import ReactMarkdown from 'react-markdown';
+import classNames from './style.module.scss';
 import { Context } from '../../store/Provider';
 
 const RepositoryDetails = ({ match }) => {
@@ -14,12 +16,14 @@ const RepositoryDetails = ({ match }) => {
     getReadme(match.url, dispatch)
   }, [match.url, dispatch]);
 
-  return <section>
-    <h2>Welcome to project 1's  Reade me file</h2>
-    <h4>A super cool project by Someone</h4>
-    <p>
-      mark down content
-    </p>
+  return <section className={classNames.markdown}>
+    {!fetching &&
+      <ReactMarkdown
+        source={data}
+        escapeHtml={false}
+      // renderers={{ code: CodeBlock }}
+      />
+    }
   </section>
 }
 

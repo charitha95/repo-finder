@@ -36,7 +36,6 @@ const Repositories = ({ match }) => {
         </section>
 
         <section className={classes.readme}>
-          <p>select a repo to load</p>
           <Route path={`${match.path}/:id`} component={RepositoryDetails} />
         </section>
       </Card>

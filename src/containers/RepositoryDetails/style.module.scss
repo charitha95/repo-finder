@@ -1,0 +1,18 @@
+.markdown {
+  max-height: 450px;
+  overflow: auto;
+  padding: 12px 15px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-style: normal;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  a {
+    color: #17a8bf;
+  }
+}
