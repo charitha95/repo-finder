@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import classes from "./style.module.scss";
-import backIcon from "../../assets/icons/back.svg";
+import backIcon from "../../assets/icons/back.png";
 import RepositoryDetails from "../RepositoryDetails";
 import getRepositories from "../../store/actions/repository.action";
 import { Context } from "../../store/Provider";
@@ -30,7 +30,9 @@ export default function Repositories({ match }) {
 
       <section className={classes.goBack}>
         <Link to="/">
-          <img src={backIcon} alt="back" />
+          <figure>
+            <img src={backIcon} alt="back" />
+          </figure>
           <label>Go back</label>
         </Link>
       </section>

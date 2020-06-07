@@ -10,13 +10,24 @@
       display: flex;
       align-items: center;
       margin-bottom: 25px;
-      img {
-        width: 12px;
-        height: 12px;
+      figure {
+        width: 15px;
+        height: 15px;
         padding: 10px;
         background: #fff;
         border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        margin-right: 10px;
+        img {
+          width: 9px;
+          height: 15px;
+          margin: 0;
+        }
       }
+
       * {
         margin-right: 10px;
         cursor: pointer;
