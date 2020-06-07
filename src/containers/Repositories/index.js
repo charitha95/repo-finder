@@ -32,7 +32,13 @@ const Repositories = ({ match }) => {
 
       <Card customClass={classes.repoListContainer}>
         <section className={classes.repoList}>
-          {!fetching && <List userRepos={data} />}
+          {fetching ?
+            <p>fecthing!</p> :
+            <>
+              <List userRepos={data} />
+              {data && data.length !== 0 ? <span className={classes.result}>{data.length} repositories found </span> : null}
+            </>
+          }
         </section>
 
         <section className={classes.readme}>

@@ -32,6 +32,14 @@
     .repoList {
       padding: 0 10px;
       height: 100%;
+      .result {
+        text-align: center;
+        display: block;
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 18px;
+        color: $primary-dark-color;
+      }
     }
     .readme {
       background-color: $primary-dark-color;
