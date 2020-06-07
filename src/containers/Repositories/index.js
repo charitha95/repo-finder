@@ -3,6 +3,7 @@ import classes from "./style.module.scss";
 import backIcon from "../../assets/icons/back.svg";
 import RepositoryDetails from "../RepositoryDetails";
 import getRepositories from "../../store/actions/repository.action";
+import Fetching from "../../components/UI/Fetching/Fetching";
 import { Context } from "../../store/Provider";
 import { Card, List } from "../../components/UI";
 import { Route, Link } from "react-router-dom";
@@ -33,7 +34,7 @@ const Repositories = ({ match }) => {
       <Card customClass={classes.repoListContainer}>
         <section className={classes.repoList}>
           {fetching ?
-            <p>fecthing!</p> :
+            <Fetching /> :
             <>
               <List userRepos={data} />
               {data && data.length !== 0 ? <span className={classes.result}>{data.length} repositories found </span> : null}
