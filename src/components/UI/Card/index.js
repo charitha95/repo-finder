@@ -1,8 +1,13 @@
 import React from 'react';
 import classes from './style.module.scss';
 
-const Card = ({ children, customClass }) => <section className={`${classes.card} ${customClass}`}>
-  {children}
-</section>
+/**
+ * Function represents repo card component (with shadow)
+ * @param {Object} props Component Props 
+ */
+export default function Card({ children, customClass }) {
 
-export default Card;
+  return <section className={`${classes.card} ${customClass}`}>}
+  {children}
+  </section>
+}

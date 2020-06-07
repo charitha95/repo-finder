@@ -8,7 +8,11 @@ import { Card, List } from "../../components/UI";
 import { Route, Link } from "react-router-dom";
 import { Fetching, Error } from "../../components/UI/States";
 
-const Repositories = ({ match }) => {
+/**
+ * Function represents repositories of the git user
+ * @param {Object} props Component Props 
+ */
+export default function Repositories({ match }) {
 
   const { contextState, dispatch } = useContext(Context);
 
@@ -50,5 +54,3 @@ const Repositories = ({ match }) => {
     </section>
   );
 };
-
-export default Repositories;

@@ -4,6 +4,9 @@ import RepoFinder from "./containers/RepoFinder";
 import Repositories from "./containers/Repositories";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 
+/**
+ * Function represents the app component
+ */
 export default function App() {
   return (
     <Layout>

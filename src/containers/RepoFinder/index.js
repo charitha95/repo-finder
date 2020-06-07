@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { Button, Input, Card } from '../../components/UI';
 import classes from './style.module.scss';
+import { Button, Input, Card } from '../../components/UI';
 
-const RepoFinder = props => {
+/**
+ * Function represents the repo finder component 
+ * @param {Object} props Component Props 
+ */
+export default function RepoFinder(props) {
 
   const [username, setUsername] = useState('');
 
@@ -31,5 +35,3 @@ const RepoFinder = props => {
     </Card>
   </section>
 }
-
-export default RepoFinder;

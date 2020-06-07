@@ -3,7 +3,11 @@ import rootReducer from './reducers/rootReducer';
 
 export const Context = createContext();
 
-const Provider = ({ children }) => {
+/**
+ * Function represents provider component which is going to wrap up the app.
+ * @param {Object} props component props
+ */
+export default function Provider({ children }) {
 
   const [contextState, dispatch] = useReducer(rootReducer, { repos: [], readme: '' })
 
@@ -11,5 +15,3 @@ const Provider = ({ children }) => {
     {children}
   </Context.Provider>
 }
-
-export default Provider;

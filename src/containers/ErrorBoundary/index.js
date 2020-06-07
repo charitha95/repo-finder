@@ -2,6 +2,9 @@ import React from 'react';
 import { Button } from '../../components/UI';
 import classNames from './style.module.scss';
 
+/**
+ * Function represents the erro boundray component
+ */
 class ErrorBoundary extends React.Component {
 
   state = { hasError: false };
