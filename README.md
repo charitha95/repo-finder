@@ -47,3 +47,41 @@ This folder contains three files and a single folder. `repository.reducer.js`, `
 This folder contains three files. Two files are `action` files and one is a `action-type` file. It has moved commonly used string like key into `types` file so that those keys can refers from one place than writing it manually.
 
 `.action.js` files gets the `dispatch` from the component you call. Once you get the reference to the dispatch in action you dispatch actions based on the scenarios. There are tree scenarios respectively `fetching, success,` and `error`. `fetching` will be dispatch soon after you hit to the action, `success` will call when it is are done with the `api request`. And finally `error` will be dispatch if any errors occurd. NOTE: `api requests` have moved to a separate folder to keep the separation of concerns (SoC) as a design principle.
+
+#### Usage
+
+##### In Component
+
+```shell
+import getRepositories from "../../store/actions/repository.action";
+import { Context } from "../../store/Provider";
+
+export default function Repositories({ match }) {
+
+  // destruct and get values from useContext
+  const { contextState, dispatch } = useContext(Context);
+
+  // destruct and get values from contextState
+  const { fetching, data, error } = contextState.repos;
+
+  useEffect(() => {
+    // call get data from action creator, passing down dispatch to as an argument.
+    getRepositories(match.params.id, dispatch);
+  }, [match.params.id, dispatch]);
+
+  return <section className={classes.repoList}>
+          {fetching ?
+            <Fetching /> :
+            error ? <Error /> :
+              <>
+                <List userRepos={data} />
+                {data && data.length !== 0 ?
+                <span className={classes.result}>
+                {data.length} repositories found
+                </span> :
+                null}
+              </>
+          }
+  </section>
+}
+```
