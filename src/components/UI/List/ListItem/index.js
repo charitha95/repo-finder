@@ -1,6 +1,14 @@
 import React from 'react';
-import { NavLink, useParams } from 'react-router-dom';
 import classes from './style.module.scss';
+import PropTypes from 'prop-types';
+import { NavLink, useParams } from 'react-router-dom';
+
+ListItem.propTypes = {
+  path: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  language: PropTypes.string,
+  description: PropTypes.string
+}
 
 /**
  * Function represents repo a single repository component
