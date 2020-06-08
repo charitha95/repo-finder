@@ -85,3 +85,15 @@ export default function Repositories({ match }) {
   </section>
 }
 ```
+<br/><br/>
+
+## Best practices :sparkles:
+Following are some of the best practices that this project concered about.
+
+✅ Separation of Concern (SoC).
+✅ Single source of truth.
+✅ ErrorBoundary (to catch possible errors hapening on components on runtime).
+✅ Component based architecture.
+✅ Validate PropTypes.
+✅ CSS Preprocessors.
+✅ CSS Modules.
