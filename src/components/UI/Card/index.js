@@ -1,5 +1,11 @@
 import React from 'react';
 import classes from './style.module.scss';
+import PropTypes from 'prop-types';
+
+Card.propTypes = {
+  children: PropTypes.array,
+  customClass: PropTypes.string
+}
 
 /**
  * Function represents repo card component (with shadow)

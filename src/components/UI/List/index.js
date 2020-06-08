@@ -1,7 +1,12 @@
 import React from 'react';
 import ListItem from './ListItem';
 import classes from './style.module.scss';
+import PropTypes from 'prop-types';
 import { NotFound } from '../States';
+
+List.propTypes = {
+  userRepos: PropTypes.array
+}
 
 /**
  * Function represents repo list component
