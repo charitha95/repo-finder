@@ -8,19 +8,19 @@ Live Sandbox: https://codesandbox.io/s/github/charitha95/repo-finder
 ## Description :newspaper:
 
 Repo finder is a CRA application implemented to find available repos based on a given GIT user name. Application implements its own custom state management system to manage the state of the application. Uses standard React and `GIT public` endpoints to fetch data.
-<br/>
+<br/><br/>
 
 ## Installing :wrench:
 
 - Copy the url https://github.com/charitha95/repo-finder.git
 - Do a `git clone` with the url.
 - Run `yarn` in terminal to install modules.
-  <br/>
+  <br/><br/>
 
 ## Running the project :runner:
 
 - Run `yarn start` in terminal to run the project. This will spin up the app and open in a browser.
-  <br/>
+  <br/><br/>
 
 ## State management mechanism - Explanation:fire:
 
