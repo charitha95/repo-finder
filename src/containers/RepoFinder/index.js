@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from './style.module.scss';
+import classNames from './style.module.scss';
 import { Button, Input, Card } from '../../components/UI';
 
 /**
@@ -15,13 +15,13 @@ export default function RepoFinder(props) {
     props.history.push(`/${username}`)
   }
 
-  return <section className={classes.repoFinder}>
-    <section className={classes.header}>
+  return <section className={classNames.repoFinder}>
+    <section className={classNames.header}>
       <h1>Hello!</h1>
       <h3>Welcome to GitHub Repo Finder app.</h3>
     </section>
 
-    <Card customClass={classes.search}>
+    <Card customClass={classNames.search}>
       <Input
         type='text'
         placeholder='Enter Git user name'

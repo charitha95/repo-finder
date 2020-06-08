@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './style.module.scss';
+import classNames from './style.module.scss';
 import PropTypes from 'prop-types';
 
 Card.propTypes = {
@@ -13,7 +13,7 @@ Card.propTypes = {
  */
 export default function Card({ children, customClass }) {
 
-  return <section className={`${classes.card} ${customClass}`}>
+  return <section className={`${classNames.card} ${customClass}`}>
     {children}
   </section>
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './style.module.scss';
+import classNames from './style.module.scss';
 import PropTypes from 'prop-types';
 
 Input.propTypes = {
@@ -16,7 +16,7 @@ Input.propTypes = {
 export default function Input({ type = 'text', placeholder, changeHandler, value }) {
 
   return <input
-    className={classes.input}
+    className={classNames.input}
     type={type}
     placeholder={placeholder}
     onChange={changeHandler}

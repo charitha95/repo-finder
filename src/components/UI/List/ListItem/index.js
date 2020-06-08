@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './style.module.scss';
+import classNames from './style.module.scss';
 import PropTypes from 'prop-types';
 import { NavLink, useParams } from 'react-router-dom';
 
@@ -18,8 +18,8 @@ export default function ListItem({ path, title, language, description }) {
 
   const param = useParams();
 
-  return <li className={classes.item}>
-    <NavLink to={`/${param.id}/${path}`} activeClassName={classes.activeLink}>
+  return <li className={classNames.item}>
+    <NavLink to={`/${param.id}/${path}`} activeClassName={classNames.activeLink}>
       <label>{title}</label>
       {language && <span> <strong> Language:</strong> {language}</span>}
       {description && <span> <strong>Description:</strong> {description}</span>}

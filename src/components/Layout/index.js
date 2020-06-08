@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './style.module.scss';
+import classNames from './style.module.scss';
 import PropTypes from 'prop-types';
 
 Layout.propTypes = {
@@ -15,7 +15,7 @@ Layout.propTypes = {
  */
 export default function Layout(props) {
 
-  return <main className={classes.layout}>
+  return <main className={classNames.layout}>
     {props.children}
   </main>
 }

@@ -69,14 +69,14 @@ export default function Repositories({ match }) {
     getRepositories(match.params.id, dispatch);
   }, [match.params.id, dispatch]);
 
-  return <section className={classes.repoList}>
+  return <section className={classNames.repoList}>
           {fetching ?
             <Fetching /> :
             error ? <Error /> :
               <>
                 <List userRepos={data} />
                 {data && data.length !== 0 ?
-                <span className={classes.result}>
+                <span className={classNames.result}>
                 {data.length} repositories found
                 </span> :
                 null}

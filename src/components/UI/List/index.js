@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItem from './ListItem';
-import classes from './style.module.scss';
+import classNames from './style.module.scss';
 import PropTypes from 'prop-types';
 import { NotFound } from '../States';
 
@@ -16,7 +16,7 @@ export default function List({ userRepos }) {
 
   return <>
     {(userRepos && userRepos.length !== 0) ?
-      <ul className={classes.list}>
+      <ul className={classNames.list}>
         {
           userRepos.map(item => <ListItem
             key={item.id}

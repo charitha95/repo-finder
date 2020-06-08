@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import classes from "./style.module.scss";
+import classNames from "./style.module.scss";
 import backIcon from "../../assets/icons/back.png";
 import RepositoryDetails from "../RepositoryDetails";
 import getRepositories from "../../store/actions/repository.action";
@@ -23,12 +23,12 @@ export default function Repositories({ match }) {
   }, [match.params.id, dispatch]);
 
   return (
-    <section className={classes.repositories}>
-      <section className={classes.header}>
+    <section className={classNames.repositories}>
+      <section className={classNames.header}>
         <h3>Repositories of <strong>{match.params.id}</strong> User</h3>
       </section>
 
-      <section className={classes.goBack}>
+      <section className={classNames.goBack}>
         <Link to="/">
           <figure>
             <img src={backIcon} alt="back" />
@@ -37,19 +37,19 @@ export default function Repositories({ match }) {
         </Link>
       </section>
 
-      <Card customClass={classes.repoListContainer}>
-        <section className={classes.repoList}>
+      <Card customClass={classNames.repoListContainer}>
+        <section className={classNames.repoList}>
           {fetching ?
             <Fetching /> :
             error ? <Error /> :
               <>
                 <List userRepos={data} />
-                {data && data.length !== 0 ? <span className={classes.result}>{data.length} repositories found </span> : null}
+                {data && data.length !== 0 ? <span className={classNames.result}>{data.length} repositories found </span> : null}
               </>
           }
         </section>
 
-        <section className={classes.readme}>
+        <section className={classNames.readme}>
           <Route path={`${match.path}/:id`} component={RepositoryDetails} />
         </section>
       </Card>
