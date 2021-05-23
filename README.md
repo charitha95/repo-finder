@@ -1,7 +1,7 @@
 # React Repo Finder.
 
 ## Demo
-Demo: https://repofindercg.netlify.app/
+Demo: https://repofindercg.netlify.app/ <br/>
 Sandbox: https://codesandbox.io/s/github/charitha95/repo-finder
 <br/><br/>
 
