@@ -1,8 +1,8 @@
 # React Repo Finder.
 
 ## Demo
-
-Live Sandbox: https://codesandbox.io/s/github/charitha95/repo-finder
+Demo: https://repofindercg.netlify.app/
+Sandbox: https://codesandbox.io/s/github/charitha95/repo-finder
 <br/><br/>
 
 ## Description :newspaper:
