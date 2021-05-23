@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .repoFinder {
   min-width: 700px;
@@ -11,6 +11,16 @@
   .search {
     * {
       margin: 8px;
+    }
+  }
+  .sourceCode {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    figure {
+      margin-left: 5px;
+      margin-right: 0;
     }
   }
 }
